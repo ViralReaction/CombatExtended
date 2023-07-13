@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Cryoweapons</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<!-- Ammo Category -->
+				<CombatExtended.AmmoCategoryDef>
+					<defName>Cryo</defName>
+					<label>cryo</label>
+					<labelShort>cryo</labelShort>
+					<description>Designed to damage flesh through cryogenic gas</description>
+				</CombatExtended.AmmoCategoryDef>
+				<!-- Ammo Set Cryo -->
+				<CombatExtended.AmmoSetDef>
+					<defName>AmmoSet_CryoPistol</defName>
+					<label>Cryo Pistol Munitions</label>
+					<ammoTypes>
+						<Ammo_CryoMunitions>Bullet_Cryo_Pistol</Ammo_CryoMunitions>
+					</ammoTypes>
+				</CombatExtended.AmmoSetDef>
+				<CombatExtended.AmmoSetDef>
+					<defName>AmmoSet_CryoRifle</defName>
+					<label>Cryo Rifle Munitions</label>
+					<ammoTypes>
+						<Ammo_CryoMunitions>Bullet_Cryo_Rifle</Ammo_CryoMunitions>
+					</ammoTypes>
+				</CombatExtended.AmmoSetDef>
+								<CombatExtended.AmmoSetDef>
+					<defName>AmmoSet_CryoLauncher</defName>
+					<label>Cryo Rifle Munitions</label>
+					<ammoTypes>
+						<Ammo_CryoMunitions>Bullet_Cryo_Launcher</Ammo_CryoMunitions>
+					</ammoTypes>
+				</CombatExtended.AmmoSetDef>
+								<CombatExtended.AmmoSetDef>
+					<defName>AmmoSet_CryoRail</defName>
+					<label>Cryo Rifle Munitions</label>
+					<ammoTypes>
+						<Ammo_CryoMunitions>Bullet_Cryo_Rail</Ammo_CryoMunitions>
+					</ammoTypes>
+				</CombatExtended.AmmoSetDef>
+				<!-- Cryo Munition Ammo -->
+				<ThingDef Class="CombatExtended.AmmoDef" ParentName="SpacerSmallAmmoBase">
+					<defName>Ammo_CryoMunitions</defName>
+					<label>Cryo munition</label>
+					<description>Cryogenic containment power cell</description>
+					<statBases>
+						<Mass>0.002</Mass>
+						<Bulk>0.005</Bulk>
+						<MarketValue>0.23</MarketValue>
+					</statBases>
+					<tradeTags>
+						<li>CE_AutoEnableTrade</li>
+						<li>CE_AutoEnableCrafting_FabricationBench</li>
+						<!-- Plasma ammo can't be handloaded, and the containment cell must be precision-machined anyway -->
+					</tradeTags>
+					<thingCategories>
+						<li>AmmoAdvanced</li>
+					</thingCategories>
+					<graphicData>
+						<texPath>Things/Ammo/PlasmaCell/Pistol</texPath>
+						<graphicClass>CombatExtended.Graphic_StackCountRanged</graphicClass>
+					</graphicData>
+					<ammoClass>Cryo</ammoClass>
+					<comps>
+						<!-- Arbitarily defined cookoff explosive stats; represents a plasma containment system failing -->
+						<li Class="CombatExtended.CompProperties_ExplosiveCE">
+							<damageAmountBase>15</damageAmountBase>
+							<explosiveDamageType>CW_CryoDamageShell</explosiveDamageType>
+							<explosiveRadius>0.25</explosiveRadius>
+							<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						</li>
+						<li Class="CombatExtended.CompProperties_Fragments">
+							<fragments>
+								<Fragment_Large>2</Fragment_Large>
+								<Fragment_Small>4</Fragment_Small>
+							</fragments>
+						</li>
+					</comps>
+				</ThingDef>
+				<!-- Cryo Bullets -->
+				<ThingDef ParentName="BaseExplosiveBullet">
+					<defName>Bullet_Cryo_Pistol</defName>
+					<label>Cryo Bolt</label>
+					<graphicData>
+						<texPath>Things/Projectile/Charged/ChargeShot</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<speed>50</speed>
+						<damageDef>CW_CryoDamagePistolBullet</damageDef>
+						<damageAmountBase>2</damageAmountBase>
+						<armorPenetrationSharp>4</armorPenetrationSharp>
+						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+					</projectile>
+				</ThingDef>
+				<ThingDef ParentName="BaseExplosiveBullet">
+					<defName>Bullet_Cryo_Rifle</defName>
+					<label>Cryo Bolt</label>
+					<graphicData>
+						<texPath>Things/Projectile/Charged/ChargeShot</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<speed>50</speed>
+						<damageDef>CW_CryoDamageRifleBullet</damageDef>
+						<damageAmountBase>4</damageAmountBase>
+						<armorPenetrationSharp>4</armorPenetrationSharp>
+						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+					</projectile>
+				</ThingDef>
+				<ThingDef ParentName="BaseExplosiveBullet">
+					<defName>Bullet_Cryo_Launcher</defName> 
+					<label>Cryo Bolt</label>
+					<graphicData>
+						<texPath>Projectile/Cryolauncherbullet</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<speed>20</speed>
+						<damageDef>CW_CryoDamageShell</damageDef>
+						<damageAmountBase>8</damageAmountBase>
+						<armorPenetrationSharp>4</armorPenetrationSharp>
+						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+						<explosionRadius>2.9</explosionRadius>
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						<ai_IsIncendiary>false</ai_IsIncendiary>
+						<arcHeightFactor>0.55</arcHeightFactor>
+						<shadowSize>0.6</shadowSize>
+						<soundExplode>Explosion_Smoke</soundExplode>
+						<screenShakeFactor>0</screenShakeFactor>
+					</projectile>
+				</ThingDef>
+				<ThingDef ParentName="BaseExplosiveBullet">
+					<defName>Bullet_Cryo_Rail</defName>
+					<label>Cryo Bolt</label>
+					<graphicData>
+						<texPath>Things/Projectile/Charged/ChargeShot</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						<speed>150</speed>
+						<damageDef>CW_CryoDamageRailShot</damageDef>
+						<damageAmountBase>15</damageAmountBase>
+						<armorPenetrationSharp>4</armorPenetrationSharp>
+						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+						<explosionRadius>1.4</explosionRadius>
+						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+						<ai_IsIncendiary>false</ai_IsIncendiary>
+						<soundExplode>ThumpCannon_Impact</soundExplode>
+						<screenShakeFactor>0</screenShakeFactor>
+					</projectile>
+				</ThingDef>
+				<!-- Ammo Recipe -->
+				<RecipeDef ParentName="ChargeAmmoRecipeBase">
+					<defName>MakeAmmo_CryoMunitions</defName>
+					<label>make cryo munitions</label>
+					<description>Craft 500 shots' worth of cryo munition cartridges.</description>
+					<jobString>Making cryo munition cartridges</jobString>
+					<workAmount>3400</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>14</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Plasteel</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ComponentIndustrial</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>Steel</li>
+							<li>Plasteel</li>
+							<li>ComponentIndustrial</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<Ammo_CryoMunitions>500</Ammo_CryoMunitions>
+					</products>
+				</RecipeDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>
