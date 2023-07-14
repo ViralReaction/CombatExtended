@@ -250,8 +250,7 @@
 						<defaultProjectile>Bullet_Cryo_Rail</defaultProjectile>
 						<warmupTime>5</warmupTime>
 						<range>43</range>
-						<burstShotCount>1</burstShotCount>
-						<soundCast>Bullet_Cryo_Rail</soundCast>
+						<soundCast>CW_SoundCryorail</soundCast>
 						<soundCastTail>GunTail_Medium</soundCastTail>
 						<muzzleFlashScale>14</muzzleFlashScale>
 						<ammoConsumedPerShotCount>20</ammoConsumedPerShotCount>

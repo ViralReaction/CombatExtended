@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Cryoweapons</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamagePistolBullet" or defname="CW_CryoDamageRifleBullet" or defName="CW_CryoDamageShell" or defName="CW_CryoDamageRailShot"]/armorCategory</xpath>
+					<value>
+						<armorCategory>Sharp</armorCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamagePistolBullet" or defname="CW_CryoDamageRifleBullet" or defName="CW_CryoDamageShell" or defName="CW_CryoDamageRailShot"]/additionalHediffs</xpath>
+					<value>
+						<additionalHediffs>
+							<li>
+								<hediff>CW_CryoBuildup</hediff>
+								<severityPerDamageDealt>0.055</severityPerDamageDealt>
+							</li>
+						</additionalHediffs>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamagePistolBullet" or defname="CW_CryoDamageRifleBullet" or defName="CW_CryoDamageShell" or defName="CW_CryoDamageRailShot"]/externalViolence</xpath>
+					<value>
+						<externalViolence>true</externalViolence>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamagePistolBullet"]/defaultArmorPenetration</xpath>
+					<value>
+						<defaultArmorPenetration>.3</defaultArmorPenetration>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamageRifleBullet"]/defaultArmorPenetration</xpath>
+					<value>
+						<defaultArmorPenetration>.4</defaultArmorPenetration>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamageShell"]/defaultArmorPenetration</xpath>
+					<value>
+						<defaultArmorPenetration>.6</defaultArmorPenetration>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/DamageDef[defName="CW_CryoDamageRailShot"]/defaultArmorPenetration</xpath>
+					<value>
+						<defaultArmorPenetration>.8</defaultArmorPenetration>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -83,7 +83,7 @@
 					</comps>
 				</ThingDef>
 				<!-- Cryo Bullets -->
-				<ThingDef ParentName="BaseExplosiveBullet">
+				<ThingDef ParentName="BaseBulletCE">
 					<defName>Bullet_Cryo_Pistol</defName>
 					<label>Cryo Bolt</label>
 					<graphicData>
@@ -94,11 +94,11 @@
 						<speed>50</speed>
 						<damageDef>CW_CryoDamagePistolBullet</damageDef>
 						<damageAmountBase>2</damageAmountBase>
-						<armorPenetrationSharp>4</armorPenetrationSharp>
-						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+						<armorPenetrationSharp>8</armorPenetrationSharp>
+						<armorPenetrationBlunt>10.8</armorPenetrationBlunt>
 					</projectile>
 				</ThingDef>
-				<ThingDef ParentName="BaseExplosiveBullet">
+				<ThingDef ParentName="BaseBulletCE">
 					<defName>Bullet_Cryo_Rifle</defName>
 					<label>Cryo Bolt</label>
 					<graphicData>
@@ -108,12 +108,12 @@
 					<projectile Class="CombatExtended.ProjectilePropertiesCE">
 						<speed>50</speed>
 						<damageDef>CW_CryoDamageRifleBullet</damageDef>
-						<damageAmountBase>4</damageAmountBase>
-						<armorPenetrationSharp>4</armorPenetrationSharp>
-						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+						<damageAmountBase>3</damageAmountBase>
+						<armorPenetrationSharp>25.6</armorPenetrationSharp>
+						<armorPenetrationBlunt>15</armorPenetrationBlunt>
 					</projectile>
 				</ThingDef>
-				<ThingDef ParentName="BaseExplosiveBullet">
+				<ThingDef ParentName="BaseBulletCE">
 					<defName>Bullet_Cryo_Launcher</defName> 
 					<label>Cryo Bolt</label>
 					<graphicData>
@@ -123,19 +123,19 @@
 					<projectile Class="CombatExtended.ProjectilePropertiesCE">
 						<speed>20</speed>
 						<damageDef>CW_CryoDamageShell</damageDef>
-						<damageAmountBase>8</damageAmountBase>
-						<armorPenetrationSharp>4</armorPenetrationSharp>
-						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
+						<damageAmountBase>5</damageAmountBase>
 						<explosionRadius>2.9</explosionRadius>
 						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 						<ai_IsIncendiary>false</ai_IsIncendiary>
+						<armorPenetrationSharp>22.56</armorPenetrationSharp>
+						<armorPenetrationBlunt>24</armorPenetrationBlunt>
 						<arcHeightFactor>0.55</arcHeightFactor>
 						<shadowSize>0.6</shadowSize>
 						<soundExplode>Explosion_Smoke</soundExplode>
 						<screenShakeFactor>0</screenShakeFactor>
 					</projectile>
 				</ThingDef>
-				<ThingDef ParentName="BaseExplosiveBullet">
+				<ThingDef ParentName="BaseBulletCE">
 					<defName>Bullet_Cryo_Rail</defName>
 					<label>Cryo Bolt</label>
 					<graphicData>
@@ -145,18 +145,15 @@
 					<projectile Class="CombatExtended.ProjectilePropertiesCE">
 						<speed>150</speed>
 						<damageDef>CW_CryoDamageRailShot</damageDef>
-						<damageAmountBase>15</damageAmountBase>
-						<armorPenetrationSharp>4</armorPenetrationSharp>
-						<armorPenetrationBlunt>5.4</armorPenetrationBlunt>
-						<explosionRadius>1.4</explosionRadius>
-						<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-						<ai_IsIncendiary>false</ai_IsIncendiary>
+						<damageAmountBase>8</damageAmountBase>
+						<armorPenetrationSharp>324</armorPenetrationSharp>
+						<armorPenetrationBlunt>30</armorPenetrationBlunt>
 						<soundExplode>ThumpCannon_Impact</soundExplode>
 						<screenShakeFactor>0</screenShakeFactor>
 					</projectile>
 				</ThingDef>
 				<!-- Ammo Recipe -->
-				<RecipeDef ParentName="ChargeAmmoRecipeBase">
+				<RecipeDef ParentName="AmmoRecipeBase">
 					<defName>MakeAmmo_CryoMunitions</defName>
 					<label>make cryo munitions</label>
 					<description>Craft 500 shots' worth of cryo munition cartridges.</description>
