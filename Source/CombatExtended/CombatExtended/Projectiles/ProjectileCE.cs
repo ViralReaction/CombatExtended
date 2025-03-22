@@ -987,6 +987,14 @@ namespace CombatExtended
             }
 
             var bounds = CE_Utility.GetBoundsFor(thing);
+            if (def.projectile.flyOverhead)
+            {
+                if (bounds.Contains(ExactPosition))
+                {
+                    return true;
+                }
+                return false; // Early out since below will return false
+            }
             if (!bounds.IntersectRay(ShotLine, out dist))
             {
                 return false;
