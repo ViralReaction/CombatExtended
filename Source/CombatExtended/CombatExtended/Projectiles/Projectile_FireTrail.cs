@@ -11,7 +11,7 @@ public class Projectile_FireTrail : ProjectileCE_Explosive
         base.Tick();
         if (--TicksforAppearence == 0)
         {
-            Projectile_FireTrail.ThrowFireTrail(base.Position.ToVector3Shifted(), base.Map, 0.5f);
+            ThrowFireTrail(base.Position.ToVector3Shifted(), base.Map, 0.5f);
             TicksforAppearence = 5;
         }
     }
