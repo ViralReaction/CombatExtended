@@ -270,6 +270,7 @@ Glitter Tech	|
 Glitter Weaponry	|
 Gloomy Dragonian Race	|
 GouRIMet	|
+Gravship Captain Set    |
 GREG	|
 Grimstone Beasts   |
 Grimworld: Autoguns	|
@@ -325,6 +326,7 @@ Kurin HAR Edition	|
 Leeani Playable Race	|
 Lemolim Race    |
 Let's Have a Cat!	|
+Life Support Pack   |
 Littluna Race |
 Logann Race	|
 Logistics_Mechanoid |
@@ -402,6 +404,7 @@ Nyaron Race |
 Nomad Scavengers    |
 Not Only Just a Cannon  |
 Obsidia Expansion - Mothoids Xenotype   |
+Odysseus Vacsuit Set    |
 ODZ Suits |
 Opossum Friends |
 Orassans	|
@@ -431,6 +434,7 @@ phynilla Expanded Mechs Scyther |
 pphhyy's Lightless Empyrean |
 pphhyy Sanguinary Animals   |
 Prestige Specialist Armours	|
+Prestige Vacsuit Set    |
 Primitive Core |
 Primitive Workbenches |
 Project RimFactory - Materials |
@@ -566,6 +570,7 @@ T's Conversion Staff |
 T's Samurai Faction |
 Useless Clothes |
 Ushankas Glitterworld Uprising  |
+VacSlipsuit |
 Valorant Weapon Pack |
 Vanilla Animals Expanded |
 Vanilla Animals Expanded - Endangered |
@@ -637,6 +642,7 @@ VGP Garden Drinks    |
 Victorian Era Apparels!  |
 VRE Android Factions  |
 Vulpine Race Pack	|
+W1NG VacSuit Set    |
 Wall Mounted Turrets (Continued)    |
 WarCasket Expanded  |
 WarCasket Barbatos Gundam Addon  |
